@@ -1,8 +1,8 @@
 # AI-Project
-AI in biomedicine course project , which is heart beat classification 
-Project Title: Beat Classifier for PPG Signals
 
-Table of Contents
+# Beat Classifier for PPG Signals
+
+##Table of Contents
 
 Introduction
 Team Members
@@ -14,37 +14,44 @@ Model Training and Evaluation
 Results
 Contributions
 Acknowledgments
-Introduction
+
+## Introduction
 
 Photoplethysmography (PPG) signal classification is essential in biomedical engineering for diagnosing and monitoring heart conditions. This project aims to develop a beat classifier for PPG signals, classifying each beat into Normal (N), Supraventricular (S), and Ventricular (V). Accurate classification is vital for detecting arrhythmias and other cardiac anomalies.
 
-Team Members
+## Team Members
 
 Drmic A.
 Javadi M.
 Shala M.
-Project Structure
+
+## Project Structure
 
 heart_beat_classification.ipynb: Notebook containing the preprocessing, model training, and evaluation.
 Drmic_Javadi_Shala.pdf: Detailed report describing the methodology and results.
 Setup and Installation
 
-Clone the repository:
+### Clone the repository:
 
+```
 git clone <repository_url>
 cd <repository_directory>
-Create and activate a virtual environment:
+```
 
+### Create and activate a virtual environment:
+```
 python3 -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required packages:
-
+```
+### Install the required packages:
+```
 pip install -r requirements.txt
-Data Overview
+```
+## Data Overview
 
 The dataset consists of PPG recordings from 105 patients with different sampling frequencies (128Hz and 250Hz). The goal is to classify heartbeats into three categories: Normal (N), Supraventricular (S), and Ventricular (V). The dataset is imbalanced, with the majority of beats being normal.
 
-Preprocessing
+## Preprocessing
 
 Data Splitting and Stratified Sampling
 The dataset is divided into training, validation, and testing sets using stratified sampling to maintain class distribution.
@@ -62,26 +69,30 @@ Valid Segments
 Segments with excessively high peak-to-peak amplitudes are discarded to ensure a cleaner and more reliable dataset.
 Model Training and Evaluation
 
-Models
+## Models
 VGG-Style CNN
 LSTM Model
 Bidirectional LSTM Model
 1D CNN Model
-Metrics
+
+## Metrics
 Precision
 Recall
 Specificity
 Adaptive Metric Adjustment Strategy
 Weighted Accuracy
-Results
+
+## Results
 
 The VGG-Style CNN achieved the highest weighted accuracy (92.32%) and recall (0.8350) for multiclass classification.
 The LSTM model achieved the highest weighted accuracy (70.62%) and recall (0.9052) for binary classification.
-Contributions
+
+## Contributions
 
 Shala M.: Data preprocessing, model training
 Javadi M.: Model evaluation, report preparation
 Drmic A.: Project coordination, methodology development
-Acknowledgments
+
+## Acknowledgments
 
 We acknowledge the guidance and support provided by our course instructors and peers in the biomedical engineering department.
